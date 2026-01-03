@@ -15,6 +15,9 @@ COPY . .
 # Copy .env.example to .env
 RUN cp .env.example .env
 
+# Remove walkthrough
+RUN rm -rf walkthrough
+
 # Set environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
